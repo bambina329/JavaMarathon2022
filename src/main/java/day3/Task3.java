@@ -1,5 +1,4 @@
 package day3;
-
 /*
 3. Реализовать программу, которая 5 раз запрашивает от пользователя два числа - делимое и делитель.
 
@@ -17,7 +16,6 @@ package day3;
         и так далее… (еще 2 итерации)
 */
 
-
 import java.util.Scanner;
 
 public class Task3 {
@@ -28,14 +26,10 @@ public class Task3 {
         while (i < 5) {
             double dividend = scanner.nextDouble();
             double divider = scanner.nextDouble();
-
+            i++;
             if (divider == 0) {
                 System.out.println("Деление на 0");
-                i++;
-                continue;
-            }
-                System.out.println(dividend / divider);
-                i++;
-            }
+            } else System.out.println(dividend / divider);
         }
     }
+}

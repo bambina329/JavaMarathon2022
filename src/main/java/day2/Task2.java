@@ -27,10 +27,9 @@ public class Task2 {
 
             if (i % 10 == 0) {
                 continue;
-            } else if (i % 5 == 0 && i != a && i != b) {
+            } else if (i % 5 == 0 && i != a) {
                 System.out.print(i + " ");
             }
         }
     }
-
 }

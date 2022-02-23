@@ -26,13 +26,15 @@ public class Task2 {
         System.out.println(Arrays.toString(array));
 
         int maxNum = array[0];
+        int minNum = array[0];
+
         for (int i : array) {
             if (i > maxNum)
                 maxNum = i;
         }
         System.out.println("Наибольший элемент массива = " + maxNum);
 
-        int minNum = 10000;
+
         for (int i : array) {
             if (i < minNum)
                 minNum = i;
@@ -58,3 +60,14 @@ public class Task2 {
 }
 
 
+/*
+    Для поиска наибольшего и наименьшего элемента массива переменные,
+    которые будут хранить эти значения необходимо либо инициализировать уже после заполнения массива, первым элементом этого массива
+
+        max =arr[0]
+        min = arr{0]
+        либо до массива, но самым "крайним" числом в диапазоне, т.е.
+
+        max = Integer.MIN_VALUE
+        min = Integer.MAX_VALUE
+        Это максимально универсальный подход.*/
