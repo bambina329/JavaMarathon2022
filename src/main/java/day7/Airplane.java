@@ -1,11 +1,23 @@
-package day6;
+package day7;
 
 public class Airplane {
-    private String manufacturer; // (изготовитель)
-    private int year;            // (год выпуска)
-    private int length;          // (длина)
-    private int weight;          // (вес)
-    private int fuel;            //(количество топлива в баке)
+    String manufacturer; // (изготовитель)
+    int year;            // (год выпуска)
+    int length;          // (длина)
+    int weight;          // (вес)
+    int fuel;            //(количество топлива в баке)
+
+    int count = 0;
+
+    public static void compareAirplanes(Airplane a, Airplane b) {
+        if (a.getLength() > b.getLength()) {
+            System.out.println("Первый самолет длиннее");
+        } else if (b.getLength() > a.getLength()) {
+            System.out.println("Второй самолет длиннее");
+        } else {
+            System.out.println("Длины самолетов равны");
+        }
+    }
 
     public Airplane(String manufacturer, int year, int length, int weight) {
         this.manufacturer = manufacturer;
@@ -19,11 +31,10 @@ public class Airplane {
         System.out.println("Изготовитель: " + manufacturer + ", год выпуска: " + year + ", длина: " + length + ", вес: " + weight + ", количество топлива в баке: " + fuel);
     }
 
-    public int fillUp (int n) {
+    public int fillUp(int n) {
         this.fuel = n;
         return n;
     }
-
 
     public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
@@ -49,9 +60,7 @@ public class Airplane {
         return fuel;
     }
 
-
-
-
-
-
+    public int getLength() {
+        return length;
+    }
 }
