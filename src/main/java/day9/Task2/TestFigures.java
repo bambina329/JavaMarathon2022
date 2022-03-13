@@ -14,12 +14,14 @@ public class TestFigures {
         };
     }
 
+    /* Записывай наоборот "Red".equals(figure.getColor()), т.к. если у фигуры в поле color будет null, получишь NullPointerException*/
+
     public static double calculateRedPerimeter(Figure[] figures) {
         double redRedPerimeter = 0;
 
 
         for (Figure figure : figures) {
-            if (figure.getColor().equals("Red"))
+            if ("Red".equals(figure.getColor()))
                 redRedPerimeter = redRedPerimeter + figure.perimeter();
         }
         return redRedPerimeter;

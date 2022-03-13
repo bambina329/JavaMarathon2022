@@ -46,11 +46,10 @@ public class Picker implements Worker {
         int count = warehouse.getCountPickedOrders();
         if (isPayed == true) {
             System.out.println("Бонус уже был выплачен");
-            return;
         } else if (count == 10000) {
             salary = salary + 70000;
-            setPayed(true);
-            return;
+            //setPayed(true);
+            isPayed = true;
         } else {
             System.out.println("Бонус пока не доступен");
         }

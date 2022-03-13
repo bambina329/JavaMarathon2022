@@ -18,9 +18,10 @@ public class Task1 {
 
         String string1 = new String("");
         for (int i = 0; i < 20001; i++) {
-            System.out.print(i + " ");
+            string1 = string1 + i + " ";
         }
-        System.out.println();
+        System.out.println(string1);
+
         long stopTime = System.currentTimeMillis(); //сохраняем время после того, как код отработал
         long timeElapsed = stopTime - startTime;
 
